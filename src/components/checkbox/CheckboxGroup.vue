@@ -28,7 +28,6 @@ const props = defineProps({
 });
 const check = (params) => {
     let updateValue = [...props.value];
-    console.log(params);
     if (params.checked) {
         updateValue.push(params.optionId);
     } else {

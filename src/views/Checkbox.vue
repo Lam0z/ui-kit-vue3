@@ -6,6 +6,7 @@ import { ref } from "vue";
 const checkboxActive = ref(true);
 const checkboxDisabled = ref(true);
 const checkboxDisabledChecked = ref(true);
+const switchProgessional = ref(false);
 
 const listOfHeroes = [
     { name: "SpiderMan", id: "h1" },
@@ -47,6 +48,17 @@ const selectedHeroes = ref(["h1", "h3"]);
                 v-model:value="selectedHeroes"
                 :options="listOfHeroes"
                 name="heroes"
+            />
+        </div>
+        <h2 class="heading-2">Switch: {{ switchProgessional }}</h2>
+        <div class="line">
+            <Checkbox
+                type="switch"
+                label="im a professianal"
+                id="switch"
+                name="switch"
+                value="i like it"
+                v-model:checked="switchProgessional"
             />
         </div>
     </div>
