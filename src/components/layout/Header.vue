@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <router-link to="/">UI Kit (Vue 3 + Composition API)</router-link>
+        <router-link to="/">UI-Kit (Vue 3 + Composition API)</router-link>
     </header>
 </template>
 
