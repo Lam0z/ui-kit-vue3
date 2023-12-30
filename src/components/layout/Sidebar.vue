@@ -7,6 +7,7 @@ const links = ref([
     { name: "Checkbox", href: "/checkbox" },
     { name: "Radiobutton", href: "/radiobutton" },
     { name: "Progress", href: "/progress" },
+    { name: "Input", href: "/input" },
 ]);
 
 const props = defineProps({
@@ -29,6 +30,7 @@ const props = defineProps({
 </template>
 <style lang="scss" scoped>
 .sidebar {
+    // z-index: 1;
     left: 0;
     top: 62px;
     height: 100%;
