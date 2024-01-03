@@ -11,6 +11,7 @@ const links = ref([
     { name: "Tabs", href: "/tabs" },
     { name: "Table", href: "/table" },
     { name: "Accordion", href: "/accordion" },
+    { name: "ShowMore", href: "/showMore" },
 ]);
 
 const props = defineProps({

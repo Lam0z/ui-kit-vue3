@@ -9,6 +9,7 @@ import Input from "@/views/Input.vue";
 import Tabs from "@/views/Tabs.vue";
 import Table from "@/views/Table.vue";
 import Accordion from "@/views/Accordion.vue";
+import ShowMore from "@/views/ShowMore.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -63,6 +64,11 @@ const router = createRouter({
             path: "/accordion",
             name: "accordion",
             component: Accordion,
+        },
+        {
+            path: "/showMore",
+            name: "showMore",
+            component: ShowMore,
         },
     ],
 });
