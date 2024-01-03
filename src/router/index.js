@@ -8,6 +8,7 @@ import Progress from "@/views/Progress.vue";
 import Input from "@/views/Input.vue";
 import Tabs from "@/views/Tabs.vue";
 import Table from "@/views/Table.vue";
+import Accordion from "@/views/Accordion.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -57,6 +58,11 @@ const router = createRouter({
             path: "/table",
             name: "table",
             component: Table,
+        },
+        {
+            path: "/accordion",
+            name: "accordion",
+            component: Accordion,
         },
     ],
 });

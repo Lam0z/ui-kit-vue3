@@ -27,7 +27,7 @@ const props = defineProps({
     },
     width: {
         type: String,
-        default: "300px",
+        default: "100%",
     },
 });
 const updateValue = (e) => {
@@ -61,6 +61,7 @@ const updateValue = (e) => {
     &-input {
         margin-bottom: 30px;
         position: relative;
+        max-width: 300px;
     }
     &-error {
         background: var(--danger);

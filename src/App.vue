@@ -13,7 +13,7 @@ const toggleMenu = ()=>{
 <template>
     <div :class="['sidebar-toggle',{'sidebar-toggle_active':isOpenMenu}]" @click="toggleMenu"><span>&#5125</span></div>
     <LayoutHeader />
-    <LayoutSidebar :openSidebar="isOpenMenu"/>
+    <LayoutSidebar :openSidebar="isOpenMenu" @layoutSidebarToggle='toggleMenu'/>
     <div class="container">
         <div :class="['content',{content_full:!isOpenMenu}]">
             <RouterView />
@@ -33,7 +33,7 @@ const toggleMenu = ()=>{
 .content {
     max-width: 1400px;
     margin-left: 250px;
-    padding: 30px;
+    padding: 80px 30px 30px;
     transition: 0.2s;
     margin-left: 250px;
     &_full {
@@ -42,13 +42,14 @@ const toggleMenu = ()=>{
 }
 
 .sidebar-toggle {
+
     position: fixed;
     left: 0;
     width: 15px;
     background: var(--primary);
     height: 100%;
     top: 62px;
-    z-index: 1;
+    z-index: 3;
     cursor: pointer;
     color: #fff;
     display: flex;
@@ -65,7 +66,7 @@ const toggleMenu = ()=>{
     
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 991px) {
     .content {
         margin-left: 0;
     }

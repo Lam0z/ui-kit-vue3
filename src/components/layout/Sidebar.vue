@@ -10,6 +10,7 @@ const links = ref([
     { name: "Input", href: "/input" },
     { name: "Tabs", href: "/tabs" },
     { name: "Table", href: "/table" },
+    { name: "Accordion", href: "/accordion" },
 ]);
 
 const props = defineProps({
@@ -18,6 +19,10 @@ const props = defineProps({
         required: true,
     },
 });
+const emit = defineEmits(["layoutSidebarToggle"]);
+const toggleMenu = () => {
+    emit("layoutSidebarToggle");
+};
 </script>
 <template>
     <div class="sidebar" :class="['sidebar', { sidebar_isopen: openSidebar }]">
@@ -26,13 +31,14 @@ const props = defineProps({
             :key="index"
             :to="link.href"
             class="sidebar__link"
+            @click="toggleMenu"
             >{{ link.name }}
         </router-link>
     </div>
 </template>
 <style lang="scss" scoped>
 .sidebar {
-    // z-index: 1;
+    z-index: 2;
     left: 0;
     top: 62px;
     height: 100%;
@@ -43,8 +49,12 @@ const props = defineProps({
     transition: 0.2s;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
     transform: translateX(-250px);
+
+    // @media (min-width: 992px) {
+    //     transform: translateX(0);
+    // }
     &_isopen {
-        transform: translateX(0px);
+        transform: translateX(0);
     }
     &__link {
         display: block;

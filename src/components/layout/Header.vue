@@ -13,7 +13,8 @@
     height: 62px;
     display: flex;
     align-items: center;
-    z-index: 1;
-    position: relative;
+    z-index: 2;
+    position: fixed;
+    inset: 0;
 }
 </style>
