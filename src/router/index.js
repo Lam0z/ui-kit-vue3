@@ -10,6 +10,7 @@ import Tabs from "@/views/Tabs.vue";
 import Table from "@/views/Table.vue";
 import Accordion from "@/views/Accordion.vue";
 import ShowMore from "@/views/ShowMore.vue";
+import Modal from "@/views/Modal.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -69,6 +70,11 @@ const router = createRouter({
             path: "/showMore",
             name: "showMore",
             component: ShowMore,
+        },
+        {
+            path: "/modal",
+            name: "modal",
+            component: Modal,
         },
     ],
 });

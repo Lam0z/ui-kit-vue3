@@ -24,6 +24,10 @@ const props = defineProps({
         type: String,
         required: false,
     },
+    iconType: {
+        type: String,
+        default: "fa-regular",
+    },
     size: {
         type: String,
         default: "normal",
@@ -48,7 +52,7 @@ const clickOnButton = () => {
         @click="clickOnButton"
     >
         <span v-if="icon">
-            <font-awesome-icon :icon="`fa-regular fa-${icon}`"
+            <font-awesome-icon :icon="`${iconType} fa-${icon}`"
         /></span>
         <span> {{ label }}</span>
     </button>
@@ -127,6 +131,9 @@ const clickOnButton = () => {
         width: 40px;
         height: 40px;
         border-radius: 50%;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
     }
     &_large {
         height: 48px;
